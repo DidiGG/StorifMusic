@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="480.0" prefWidth="501.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.uniquindio.storif.controllers.RegistroController">
+	<children>
+		<Pane layoutX="-7.0" prefHeight="480.0" prefWidth="94.0" style="-fx-background-color: SeaGreen;">
+			<children>
+				<ImageView fitHeight="68.0" fitWidth="75.0" layoutX="13.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+					<image>
+						<Image url="@../resources/user.png" />
+					</image>
+				</ImageView>
+			</children>
+		</Pane>
+		<Button fx:id="registroBtm" layoutX="212.0" layoutY="364.0" mnemonicParsing="false" onAction="#registroAction" prefHeight="46.0" prefWidth="162.0" style="-fx-border-color: SeaGreen;" text="Registrarse" />
+		<Separator layoutX="86.0" layoutY="335.0" prefHeight="1.0" prefWidth="399.0" style="-fx-background-color: SeaGreen;" />
+		<TextArea fx:id="txtEmail" layoutX="192.0" layoutY="136.0" prefHeight="29.0" prefWidth="277.0" />
+		<TextArea fx:id="txtUser" layoutX="192.0" layoutY="200.0" prefHeight="29.0" prefWidth="277.0" />
+		<TextArea fx:id="txtPass" layoutX="192.0" layoutY="261.0" prefHeight="29.0" prefWidth="277.0" />
+		<Text layoutX="98.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" wrappingWidth="75.20000000000005" AnchorPane.topAnchor="143.734375">
+			<font>
+				<Font size="16.0" />
+			</font>
+		</Text>
+		<Text fill="#000515" layoutX="98.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User:" wrappingWidth="113.13671875">
+			<font>
+				<Font size="16.0" />
+			</font>
+		</Text>
+		<Text layoutX="98.0" layoutY="288.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" wrappingWidth="113.13671875">
+			<font>
+				<Font size="16.0" />
+			</font>
+		</Text>
+		<Button fx:id="registroBtm1" layoutX="409.0" layoutY="438.0" mnemonicParsing="false" onAction="#registroAction" prefHeight="24.0" prefWidth="75.0" style="-fx-border-color: SeaGreen;" text="Cancelar" />
+		<Label layoutX="192.0" layoutY="45.0" text="Registro de Usuaios">
+			<font>
+				<Font name="System Bold" size="16.0" />
+			</font>
+		</Label>
+	</children>
+</AnchorPane>
