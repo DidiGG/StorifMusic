@@ -3,6 +3,8 @@ package co.uniquindio.storif.controllers;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javax.swing.JOptionPane;
+
 import co.uniquindio.storif.Aplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,8 +26,8 @@ public class RegistroController {
 	@FXML
 	private Button registroBtm;
 
-	@FXML
-	private Button registroBtm1;
+	  @FXML
+	private Button btnCancelar;
 
 	@FXML
 	private TextArea txtEmail;
@@ -36,15 +38,20 @@ public class RegistroController {
 	@FXML
 	private TextArea txtUser;
 
-	@FXML
-	void registroAction(ActionEvent event) {
-
-	}
+    @FXML
+    void registroAction(ActionEvent event) {
+         JOptionPane.showMessageDialog(null, "Holaa");
+    }
+	
+    @FXML
+    void cancelarRegistro(ActionEvent event) {
+       miApp.showLogin();
+    }
 
 	@FXML
 	void initialize() {
 		assert registroBtm != null : "fx:id=\"registroBtm\" was not injected: check your FXML file 'Registro.fxml'.";
-		assert registroBtm1 != null : "fx:id=\"registroBtm1\" was not injected: check your FXML file 'Registro.fxml'.";
+		assert btnCancelar != null : "fx:id=\"registroBtm1\" was not injected: check your FXML file 'Registro.fxml'.";
 		assert txtEmail != null : "fx:id=\"txtEmail\" was not injected: check your FXML file 'Registro.fxml'.";
 		assert txtPass != null : "fx:id=\"txtPass\" was not injected: check your FXML file 'Registro.fxml'.";
 		assert txtUser != null : "fx:id=\"txtUser\" was not injected: check your FXML file 'Registro.fxml'.";

@@ -1,12 +1,10 @@
 package co.uniquindio.storif;
 
 import java.io.IOException;
-
 import co.uniquindio.storif.controllers.LoginController;
 import co.uniquindio.storif.controllers.RegistroController;
 import javafx.application.Application;
 import javafx.stage.Stage;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.fxml.FXMLLoader;
