@@ -22,7 +22,7 @@
 				</ImageView>
 			</children>
 		</Pane>
-		<Button fx:id="registroBtm" layoutX="212.0" layoutY="364.0" mnemonicParsing="false" onAction="#registroAction" prefHeight="46.0" prefWidth="162.0" style="-fx-border-color: SeaGreen;" text="Registrarse" />
+		<Button fx:id="btnRegistrar" layoutX="212.0" layoutY="364.0" mnemonicParsing="false" onAction="#registroAction" prefHeight="46.0" prefWidth="162.0" style="-fx-border-color: SeaGreen;" text="Registrarse" />
 		<Separator layoutX="86.0" layoutY="335.0" prefHeight="1.0" prefWidth="399.0" style="-fx-background-color: SeaGreen;" />
 		<TextArea fx:id="txtEmail" layoutX="192.0" layoutY="136.0" prefHeight="29.0" prefWidth="277.0" />
 		<TextArea fx:id="txtUser" layoutX="192.0" layoutY="200.0" prefHeight="29.0" prefWidth="277.0" />
