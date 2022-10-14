@@ -56,7 +56,7 @@ public class ModelFactoryController {
 		usuario.setEmail("email.com");
 
 		Canciones cancion = new Canciones();
-		cancion.setNombre("Entre tus manos");
+		cancion.setNombre("CANCION 1");
 		cancion.setAlbum("NN");
 		cancion.setAnio("2012");
 		cancion.setCodigo("1");
@@ -72,6 +72,11 @@ public class ModelFactoryController {
 
 		artista.getCancionnesArtista().add(cancion);
 		usuario.getListaCanciones().push(cancion);
+		Artista artista2 = new Artista();
+		artista2.setNombre("Lola");
+		artista2.setNacionalidad("Argentina");
+		artista2.setCodigo("2");
+		artista2.setGrupo(false);
 
 		storif.getListaUsuario().add(usuario);
 
@@ -85,7 +90,7 @@ public class ModelFactoryController {
 		usuario.setEmail("email.com");
 
 		Canciones cancion2 = new Canciones();
-		cancion2.setNombre("Bno se de ti");
+		cancion2.setNombre("CANCION2");
 		cancion2.setAlbum("NN");
 		cancion2.setAnio("2012");
 		cancion2.setCodigo("2");
@@ -93,22 +98,44 @@ public class ModelFactoryController {
 		cancion2.setGenero(Genero.ELECTRONICA);
 		cancion2.setUrl("www.esunurl.com");
 
-		artista = new Artista();
-		artista.setNombre("Lola");
-		artista.setNacionalidad("Argentina");
-		artista.setCodigo("2");
-		artista.setGrupo(false);
+		Canciones cancion3 = new Canciones();
+		cancion3.setNombre("CANCION3");
+		cancion3.setAlbum("NN");
+		cancion3.setAnio("2012");
+		cancion3.setCodigo("2");
+		cancion3.setDuracion("130");
+		cancion3.setGenero(Genero.ELECTRONICA);
+		cancion3.setUrl("www.esunurl.com");
+
+		Canciones cancion4 = new Canciones();
+		cancion4.setNombre("CANCION3");
+		cancion4.setAlbum("NN");
+		cancion4.setAnio("2012");
+		cancion4.setCodigo("2");
+		cancion4.setDuracion("130");
+		cancion4.setGenero(Genero.ELECTRONICA);
+		cancion4.setUrl("www.esunurl.com");
+
+
 
 		artista.getCancionnesArtista().push(cancion);
+		artista.getCancionnesArtista().push(cancion2);
+		artista2.getCancionnesArtista().push(cancion3);
+		artista2.getCancionnesArtista().push(cancion4);
+
 		usuario.getListaCanciones().push(cancion);
 		usuario.getListaCanciones().push(cancion2);
 
 		storif.getListaUsuario().add(usuario);
 		storif.getListaGeneralCanciones().push(cancion);
-		
-		
-		System.out.println(storif.getListaUsuario());
-		System.out.println(storif.getAdminStorif());
+		storif.getListaGeneralCanciones().push(cancion2);
+		storif.getListaGeneralCanciones().push(cancion3);
+		storif.getListaGeneralCanciones().push(cancion4);
+
+		System.out.println("Lista de Usuarios " +storif.getListaUsuario());
+		System.out.println("Admin de la APP "+storif.getAdminStorif());
+		System.out.println("CAnciones App" + storif.getListaGeneralCanciones());
+		System.out.println("Canciones Uusuario "+ usuario.getListaCanciones());
 		
 
 	}

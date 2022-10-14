@@ -12,7 +12,7 @@
 	<children>
 		<Pane prefHeight="430.0" prefWidth="586.0">
 			<children>
-				<TableView fx:id="tablaCancionesStorifUser" prefHeight="500.0" prefWidth="576.0" style="-fx-background-color: LemonChiffon;">
+				<TableView fx:id="tablaCancionesStorifUser" prefHeight="500.0" prefWidth="586.0" style="-fx-background-color: LemonChiffon;">
 					<columns>
 						<TableColumn prefWidth="291.1999939084053" text="CANCIONES" />
 						<TableColumn prefWidth="293.60003662109375" text="ARTISTA" />
@@ -27,9 +27,10 @@
 						<Image url="@../resources/logo.png" />
 					</image>
 				</ImageView>
-				<Button fx:id="btbAgregarCancion" layoutX="12.0" layoutY="243.0" mnemonicParsing="false" onAction="#agregarCancionFav" prefHeight="33.0" prefWidth="143.0" text="Agregar Favoritas" />
-				<Button fx:id="btnPlay" layoutX="14.0" layoutY="183.0" mnemonicParsing="false" onAction="#reproducirCancion" prefHeight="33.0" prefWidth="143.0" text="Play Canción" />
+				<Button fx:id="btbAgregarCancion" layoutX="11.0" layoutY="217.0" mnemonicParsing="false" onAction="#agregarCancionFav" prefHeight="33.0" prefWidth="143.0" text="Agregar Favoritas" />
+				<Button fx:id="btnPlay" layoutX="13.0" layoutY="157.0" mnemonicParsing="false" onAction="#reproducirCancion" prefHeight="33.0" prefWidth="143.0" text="Play Canción" />
 				<Button fx:id="btnCerrarSesion" layoutX="14.0" layoutY="461.0" mnemonicParsing="false" onAction="#outSesion" prefHeight="25.0" prefWidth="143.0" text="Salir de Storif" />
+            <Button fx:id="btnMisCanciones" layoutX="14.0" layoutY="297.0" mnemonicParsing="false" onAction="#mostrarCancionesUser" prefHeight="33.0" prefWidth="143.0" text="Mis Canciones" />
 			</children>
 		</Pane>
 	</children>

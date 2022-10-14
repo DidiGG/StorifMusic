@@ -4,6 +4,7 @@ import java.io.IOException;
 import co.uniquindio.storif.controllers.LoginController;
 import co.uniquindio.storif.controllers.ModelFactoryController;
 import co.uniquindio.storif.controllers.RegistroController;
+import co.uniquindio.storif.controllers.StorifUserController;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
@@ -13,10 +14,11 @@ import javafx.fxml.FXMLLoader;
 public class Aplication extends Application {
 
 	ModelFactoryController modelFactoryController = ModelFactoryController.getInstance();
-	
+
 	private Stage primaryStage;
 	LoginController login;
 	RegistroController registro;
+	StorifUserController storifUserController;
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -42,7 +44,7 @@ public class Aplication extends Application {
 
 			Scene scene = new Scene(rootLayout);
 			primaryStage.setScene(scene);
-			primaryStage.setTitle("Storif Music");
+			primaryStage.setTitle("Storif Music Login");
 
 			primaryStage.show();
 		} catch (IOException e) {
@@ -65,7 +67,7 @@ public class Aplication extends Application {
 
 			Scene scene = new Scene(rootLayout);
 			primaryStage.setScene(scene);
-			primaryStage.setTitle("Storif Music");
+			primaryStage.setTitle("Storif Music Registro");
 
 			primaryStage.show();
 		} catch (IOException e) {
@@ -75,8 +77,30 @@ public class Aplication extends Application {
 
 	}
 
+	public void showStorifUser() {
+
+		try {
+
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(Aplication.class.getResource("view/StorifUser.fxml"));
+
+			AnchorPane rootLayout = (AnchorPane) loader.load();
+			storifUserController = loader.getController();
+			storifUserController.setAplicacion(this);
+
+			Scene scene = new Scene(rootLayout);
+			primaryStage.setScene(scene);
+			primaryStage.setTitle("Storif Music");
+
+			primaryStage.show();
+		} catch (IOException e) {
+			System.out.println("No carga la ventana");
+			e.printStackTrace();
+		}
+	}
+
 	public static void main(String[] args) {
-		
+
 		launch(args);
 	}
 
@@ -88,8 +112,7 @@ public class Aplication extends Application {
 	}
 
 	/**
-	 * @param primaryStage
-	 *            the primaryStage to set
+	 * @param primaryStage the primaryStage to set
 	 */
 	public void setPrimaryStage(Stage primaryStage) {
 		this.primaryStage = primaryStage;

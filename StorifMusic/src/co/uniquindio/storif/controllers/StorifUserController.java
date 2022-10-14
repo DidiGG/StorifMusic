@@ -2,12 +2,18 @@ package co.uniquindio.storif.controllers;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import co.uniquindio.storif.Aplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableView;
+import javafx.stage.Stage;
 
 public class StorifUserController {
+
+	Aplication miApp;
+	private Stage stage;
 
 	@FXML // ResourceBundle that was given to the FXMLLoader
 	private ResourceBundle resources;
@@ -17,6 +23,9 @@ public class StorifUserController {
 
 	@FXML // fx:id="btbAgregarCancion"
 	private Button btbAgregarCancion; // Value injected by FXMLLoader
+
+	@FXML
+	private Button btnMisCanciones;
 
 	@FXML // fx:id="btnCerrarSesion"
 	private Button btnCerrarSesion; // Value injected by FXMLLoader
@@ -33,13 +42,18 @@ public class StorifUserController {
 	}
 
 	@FXML
-	void outSesion(ActionEvent event) {
+	void reproducirCancion(ActionEvent event) {
 
 	}
 
 	@FXML
-	void reproducirCancion(ActionEvent event) {
+	void mostrarCancionesUser(ActionEvent event) {
 
+	}
+
+	@FXML
+	void outSesion(ActionEvent event) {
+		miApp.showLogin();
 	}
 
 	@FXML // This method is called by the FXMLLoader when initialization is complete
@@ -52,6 +66,24 @@ public class StorifUserController {
 		assert tablaCancionesStorifUser != null
 				: "fx:id=\"tablaCancionesStorifUser\" was not injected: check your FXML file 'StorifUser.fxml'.";
 
+	}
+
+	public void setAplicacion(Aplication aplicacion) {
+		this.miApp = aplicacion;
+	}
+
+	/**
+	 * @return the stage
+	 */
+	public Stage getStage() {
+		return stage;
+	}
+
+	/**
+	 * @param stage the stage to set
+	 */
+	public void setStage(Stage stage) {
+		this.stage = stage;
 	}
 
 }

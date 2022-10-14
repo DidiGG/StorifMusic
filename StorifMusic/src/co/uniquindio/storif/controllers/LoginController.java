@@ -47,6 +47,7 @@ public class LoginController {
 
 		modelFactoryController = new ModelFactoryController();
 		modelFactoryController.inicializarDatos();
+		miApp.showStorifUser();
 	}
 
 	@FXML
