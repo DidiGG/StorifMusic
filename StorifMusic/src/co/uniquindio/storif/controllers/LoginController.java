@@ -4,7 +4,6 @@ import co.uniquindio.storif.Aplication;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -23,6 +22,7 @@ public class LoginController {
 	Aplication miApp;
 	private Stage primaryStage;
 	RegistroController registro;
+	private ModelFactoryController modelFactoryController;
 
 	@FXML
 	private ResourceBundle resources;
@@ -45,20 +45,13 @@ public class LoginController {
 	@FXML
 	void IngresoAction(ActionEvent event) {
 
+		modelFactoryController = new ModelFactoryController();
+		modelFactoryController.inicializarDatos();
 	}
 
 	@FXML
 	void RegistrarseAction(ActionEvent event) {
 		miApp.showRegistro();
-	}
-
-	@FXML
-	void initialize() {
-		assert ingresarBtm != null : "fx:id=\"ingresarBtm\" was not injected: check your FXML file 'Login.fxml'.";
-		assert registrarseBtm != null : "fx:id=\"registrarseBtm\" was not injected: check your FXML file 'Login.fxml'.";
-		assert txtPass != null : "fx:id=\"txtPass\" was not injected: check your FXML file 'Login.fxml'.";
-		assert txtUsser != null : "fx:id=\"txtUsser\" was not injected: check your FXML file 'Login.fxml'.";
-
 	}
 
 	public void setAplicacion(Aplication aplicacion) {
@@ -71,6 +64,11 @@ public class LoginController {
 
 	public void setStage(Stage stage) {
 		this.primaryStage = stage;
+	}
+
+	public void initialize(URL location, ResourceBundle resources) {
+		modelFactoryController = ModelFactoryController.getInstance();
+
 	}
 
 }

@@ -2,6 +2,7 @@ package co.uniquindio.storif;
 
 import java.io.IOException;
 import co.uniquindio.storif.controllers.LoginController;
+import co.uniquindio.storif.controllers.ModelFactoryController;
 import co.uniquindio.storif.controllers.RegistroController;
 import javafx.application.Application;
 import javafx.stage.Stage;
@@ -11,6 +12,8 @@ import javafx.fxml.FXMLLoader;
 
 public class Aplication extends Application {
 
+	ModelFactoryController modelFactoryController = ModelFactoryController.getInstance();
+	
 	private Stage primaryStage;
 	LoginController login;
 	RegistroController registro;
@@ -73,6 +76,7 @@ public class Aplication extends Application {
 	}
 
 	public static void main(String[] args) {
+		
 		launch(args);
 	}
 

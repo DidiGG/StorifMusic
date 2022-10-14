@@ -94,4 +94,12 @@ public class Artista {
 		this.cancionnesArtista = cancionnesArtista;
 	}
 
+	@Override
+	public String toString() {
+		return "Artista [codigo=" + codigo + ", nombre=" + nombre + ", nacionalidad=" + nacionalidad + ", grupo="
+				+ grupo + ", cancionnesArtista=" + cancionnesArtista + "]";
+	}
+
+	
+	
 }

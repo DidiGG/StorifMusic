@@ -9,7 +9,6 @@ public class Canciones {
 	private String duracion;
 	private String url;
 	Genero genero;
-	private Artista artista;
 
 	public Canciones() {
 	}
@@ -122,20 +121,6 @@ public class Canciones {
 	 */
 	public void setGenero(Genero genero) {
 		this.genero = genero;
-	}
-
-	/**
-	 * @return the artista
-	 */
-	public Artista getArtista() {
-		return artista;
-	}
-
-	/**
-	 * @param artista the artista to set
-	 */
-	public void setArtista(Artista artista) {
-		this.artista = artista;
 	}
 
 	@Override
