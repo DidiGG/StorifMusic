@@ -33,7 +33,10 @@ public class ModelFactoryController {
 	public static ModelFactoryController getInstance() {
 		return SingletonHolder.eINSTANCE;
 	}
-
+	
+    /**
+     * Contructor de a clase ModelFactory
+     */
 	public ModelFactoryController() {
 		admin.setUserName("admin");
 		admin.setContrasenia("$aDmiN");
@@ -45,6 +48,10 @@ public class ModelFactoryController {
 		}
 	}
 
+	
+	/**
+	 * Iniializamos datos de prueba
+	 */
 	public void inicializarDatos() {
 		/**
 		 * usuario 1

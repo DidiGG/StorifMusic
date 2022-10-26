@@ -5,6 +5,8 @@ import java.util.LinkedList;
 
 public class Storif {
 
+	
+	String c;
 	String nombre;
 	ArrayList<Usuario> listaUsuario = new ArrayList<>();
 	ArrayList<Administrador> adminStorif = new ArrayList<>();

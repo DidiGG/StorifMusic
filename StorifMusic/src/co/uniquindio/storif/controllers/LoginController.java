@@ -50,6 +50,12 @@ public class LoginController {
 		miApp.showStorifUser();
 	}
 
+	
+	
+	/**
+	 * Lanza la vista de la ventana registro
+	 * @param event
+	 */
 	@FXML
 	void RegistrarseAction(ActionEvent event) {
 		miApp.showRegistro();
